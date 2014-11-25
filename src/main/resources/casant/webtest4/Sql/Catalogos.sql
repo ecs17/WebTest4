@@ -47,5 +47,3 @@ insert into tipo_producto (nombre, descripcion) values('Dulceri', 'roductos de e
 
 insert into tipo_proveedor (abreviatura, descripcion) values('Domicilio', 'Provedores a domicilio');
 insert into tipo_proveedor (abreviatura, descripcion) values('Fijos', 'Proveedores en lugares propios');
-
-insert into precio (precio_compra, precio_venta, iva, ieps) values(5.45, 7.00, 16, 0)
