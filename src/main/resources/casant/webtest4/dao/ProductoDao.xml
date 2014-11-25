@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="casant.webtest4.dao.ProductoDao">
+    
+    <cache/>
+    
+    <select id="getProductos" resultType="Producto">
+        SELECT
+            p.id,
+            p.nombre,
+            p.descripcion,
+            p.clave_desc,
+            p.codigo_barras,
+            p.marca,
+            p.existencia,
+            p.precio_compra,
+            p.precio_venta,
+            p.iva,
+            p.ieps,
+            tex.tipoExistenciaId AS "tipo_existencia.tipoExistenciaId",
+            tex.abreviatura AS "tipo_existencia.abreviatura",
+            tex.descripcion AS "tipo_existencia.descripcion",
+            tprod.id AS "tipo_producto.id",
+            tprod.nombre AS "tipo_producto.nombre",
+            tprod.descripcion AS "tipo_producto.descripcion",
+            tpre.id AS "tipo_precentacion.id",
+            tpre.nombre AS "tipo_precentacion.nombre",
+            tpre.descripcion AS "tipo_precentacion.descripcion",
+            ep.id AS "estado_producto.id",
+            ep.estado AS "estado_producto.estado",
+            ep.descripcion AS "estado_producto.descripcion"
+        FROM
+            producto p, tipo_existencia tex, tipo_producto tprod, tipo_precentacion tpre, estado_producto ep 
+        WHERE
+            p.tipo_existencia = tex.tipoExistenciaId
+            AND p.tipo_producto = tprod.id
+            AND p.tipo_precentacion = tpre.id
+            AND p.estado_producto = ep.id
+    </select>
+    <select id="getProductoById" resultType="Producto" parameterType="int">
+        SELECT
+            p.id,
+            p.nombre,
+            p.descripcion,
+            p.clave_desc,
+            p.codigo_barras,
+            p.marca,
+            p.existencia,
+            p.precio_compra,
+            p.precio_venta,
+            p.iva,
+            p.ieps,
+            tex.tipoExistenciaId AS "tipo_existencia.tipoExistenciaId",
+            tex.abreviatura AS "tipo_existencia.abreviatura",
+            tex.descripcion AS "tipo_existencia.descripcion",
+            tprod.id AS "tipo_producto.id",
+            tprod.nombre AS "tipo_producto.nombre",
+            tprod.descripcion AS "tipo_producto.descripcion",
+            tpre.id AS "tipo_precentacion.id",
+            tpre.nombre AS "tipo_precentacion.nombre",
+            tpre.descripcion AS "tipo_precentacion.descripcion",
+            ep.id AS "estado_producto.id",
+            ep.estado AS "estado_producto.estado",
+            ep.descripcion AS "estado_producto.descripcion"
+        FROM
+            producto p, tipo_existencia tex, tipo_producto tprod, tipo_precentacion tpre, estado_producto ep 
+        WHERE
+            p.id = #{id}
+            AND p.tipo_existencia = tex.tipoExistenciaId
+            AND p.tipo_producto = tprod.id
+            AND p.tipo_precentacion = tpre.id
+            AND p.estado_producto = ep.id
+    </select>
+    
+    <!-- Catalogos  -->
+    <select id="getTipoExistencia" resultType="TipoExistencia">
+        SELECT * FROM tipo_existencia
+    </select>
+    <select id="getTipoProducto" resultType="TipoProducto">
+        SELECT * FROM tipo_producto
+    </select>
+    <select id="getTipoPrecentacion" resultType="TipoPrecentacion">
+        SELECT * FROM tipo_precentacion
+    </select>
+    <select id="getEstadoProducto" resultType="EstadoProducto">
+        SELECT * FROM estado_producto
+    </select>
+    
+    <!-- Updates -->
+    <update id="updateProducto" parameterType="Producto">
+        UPDATE
+            producto
+        SET 
+            nombre = #{nombre},
+            descripcion = #{descripcion},
+            clave_desc = #{clave_desc},
+            existencia = #{existencia},
+            marca = #{marca},
+            existencia = #{existencia},
+            precio_venta = #{precio_venta},
+            precio_compra = #{precio_compra},
+            iva = #{iva},
+            ieps = #{ieps},
+            tipo_existencia = #{tipo_existencia.tipoExistenciaId},
+            tipo_producto = #{tipo_producto.id},
+            tipo_precentacion = #{tipo_precentacion.id},
+            estado_producto = #{estado_producto.id}
+        WHERE
+            id = #{id}
+    </update>
+    
+    <!-- Inserts -->
+    <insert id="addProducto" parameterType="Producto">
+        INSERT INTO
+            producto (nombre, descripcion, clave_desc, codigo_barras, marca, existencia, precio_compra, precio_venta, iva, ieps, tipo_existencia, tipo_producto, tipo_precentacion, estado_producto)
+        VALUES
+            (#{nombre}, #{descripcion}, #{clave_desc}, #{codigo_barras}, #{marca}, #{existencia}, #{precio_compra}, #{precio_venta}, #{iva}, #{ieps}, #{tipo_existencia.tipoExistenciaId}, #{tipo_producto.id}, #{tipo_precentacion.id}, #{estado_producto.id})
+    </insert>
+</mapper>
