@@ -73,6 +73,14 @@ public class ProductosController {
         return model;
     }
     
+    @RequestMapping(value = "/deletProducto/{id}", method = RequestMethod.GET)
+    public ModelAndView deletProducto(@PathVariable("id") Integer id){
+        ModelAndView model = new ModelAndView("productosForm");
+        productoService.deletProducto(id);
+        model.addObject("listProducts", productoService.getProductos());
+        return model;
+    }
+    
     @RequestMapping(value = "altaProducto.htm", method = RequestMethod.POST)
     public ModelAndView addProducto(@ModelAttribute("producto") Producto producto,
             HttpServletRequest request, HttpServletResponse response){
@@ -84,13 +92,6 @@ public class ProductosController {
             e.printStackTrace();
             return new ModelAndView(new RedirectView("error.htm"));
         }
-    }
-    
-    @RequestMapping(value = "/deletProducto/{id}.htm", method = RequestMethod.POST)
-    public ModelAndView deletProducto(@PathVariable("id") Integer id){
-        ModelAndView model = new ModelAndView(new RedirectView("../../productosForm.htm"));
-        System.out.println("*********" + id);
-        return model;
     }
     
     @ModelAttribute("tipoExistencia")

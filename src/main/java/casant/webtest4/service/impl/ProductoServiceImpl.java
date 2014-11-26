@@ -73,5 +73,10 @@ public class ProductoServiceImpl implements ProductoService{
     public void addProducto(Producto producto) {
         productoDao.addProducto(producto);
     }
+
+    @Override
+    public void deletProducto(Integer id) {
+        productoDao.deletProducto(id);
+    }
     
 }

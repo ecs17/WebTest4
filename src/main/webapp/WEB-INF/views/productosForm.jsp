@@ -67,7 +67,7 @@
                                                             <button type="button" class="btn btn-primary btn-circle" onclick="location.href='${pageContext.request.contextPath}/editProducto/${producto.id}.htm'">
                                                                 <i class="glyphicon glyphicon-floppy-open"></i>
                                                             </button>
-                                                            <button type="button" class="btn btn-danger btn-circle" id="btnDelete" onclick="location.href='${pageContext.request.contextPath}/deletProducto/${producto.id}.htm'">
+                                                            <button type="button" class="btn btn-danger btn-circle" onclick="location.href='${pageContext.request.contextPath}/deletProducto/${producto.id}.htm'">
                                                                 <i class="glyphicon glyphicon-remove-circle"></i>
                                                             </button>
                                                         </td>
@@ -75,7 +75,7 @@
                                                 </c:forEach>
                                             </tbody>
                                         </table>
-                                        <script>
+                                        <!--<script>
                                             $(function () {
                                                 $('#btnDelete').confirmOn({
                                                     questionText: '¿Deseas eliminar el producto ' + '${agremiados.nombre}' + '?',
@@ -88,7 +88,7 @@
                                                     }
                                                 });
                                             });
-                                        </script>
+                                        </script>-->
                                     </c:if>
                                 </div>
                                 <div class="panel-body">

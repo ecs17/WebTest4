@@ -119,4 +119,12 @@
         VALUES
             (#{nombre}, #{descripcion}, #{clave_desc}, #{codigo_barras}, #{marca}, #{existencia}, #{precio_compra}, #{precio_venta}, #{iva}, #{ieps}, #{tipo_existencia.tipoExistenciaId}, #{tipo_producto.id}, #{tipo_precentacion.id}, #{estado_producto.id})
     </insert>
+    
+    <!-- Deletes -->
+    <delete id="deletProducto" parameterType="int">
+        DELETE FROM
+            producto
+        WHERE
+            id = #{id}
+    </delete>
 </mapper>

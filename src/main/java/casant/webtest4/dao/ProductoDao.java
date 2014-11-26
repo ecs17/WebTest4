@@ -35,4 +35,6 @@ public interface ProductoDao {
     List<EstadoProducto> getEstadoProducto();
     
     void addProducto(Producto producto);
+    
+    void deletProducto(Integer id);
 }
