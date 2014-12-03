@@ -22,6 +22,11 @@
 			<version>1.2</version>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.2.Final</version>
+		</dependency>
+		<dependency>
 			<groupId>unknown.binary</groupId>
 			<artifactId>cglib-2.2</artifactId>
 			<version>SNAPSHOT</version>
