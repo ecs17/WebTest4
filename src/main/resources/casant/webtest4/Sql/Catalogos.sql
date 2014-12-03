@@ -1,14 +1,14 @@
 -- Catalogos --
 
 -- Tipo Existencias--
-insert into tipo_existencia (abreviatura, descripcion) values('Peso', 'Kilogramos');
-insert into tipo_existencia (abreviatura, descripcion) values('Liquido', 'Litros');
-insert into tipo_existencia (abreviatura, descripcion) values('Botella Vidrio', 'Envase de Botella de Vidrio');
-insert into tipo_existencia (abreviatura, descripcion) values('Botella Plastico', 'Envace Botella de plastico');
-insert into tipo_existencia (abreviatura, descripcion) values('Bolsa', 'Bolsa de Plastico Mayor a 250g');
-insert into tipo_existencia (abreviatura, descripcion) values('Sobre', 'Sobres de plastico');
-insert into tipo_existencia (abreviatura, descripcion) values('Caja', 'Caja');
-insert into tipo_existencia (abreviatura, descripcion) values('Granel', 'Producto a Granel');
+insert into tipo_existencia (avreviatura, descripcion) values('Peso', 'Kilogramos');
+insert into tipo_existencia (avreviatura, descripcion) values('Liquido', 'Litros');
+insert into tipo_existencia (avreviatura, descripcion) values('Botella Vidrio', 'Envase de Botella de Vidrio');
+insert into tipo_existencia (avreviatura, descripcion) values('Botella Plastico', 'Envace Botella de plastico');
+insert into tipo_existencia (avreviatura, descripcion) values('Bolsa', 'Bolsa de Plastico Mayor a 250g');
+insert into tipo_existencia (avreviatura, descripcion) values('Sobre', 'Sobres de plastico');
+insert into tipo_existencia (avreviatura, descripcion) values('Caja', 'Caja');
+insert into tipo_existencia (avreviatura, descripcion) values('Granel', 'Producto a Granel');
 
 -- Estado Producto--
 insert into estado_producto (estado, descripcion) values('Normal', 'Se encuentra en existencia');
