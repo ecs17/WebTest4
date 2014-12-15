@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="casant.webtest4.dao.ClienteDao">
+
+        <!-- Inserts -->
+    <insert id="agregarCliente" parameterType="Cliente">
+        INSERT INTO
+            cliente (id, nombre, tipo, direccion, estado_cliente, telefono, rfc, correo_electronico)
+        VALUES
+            (#{id}, #{nombre}, #{tipo}, #{direccion}, #{estado_cliente}, #{telefono}, #{rfc}, #{correo_electronico})
+    </insert>
+
+</mapper>

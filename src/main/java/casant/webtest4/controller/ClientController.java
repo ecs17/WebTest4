@@ -2,6 +2,7 @@ package casant.webtest4.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,13 +15,15 @@ import casant.webtest4.service.ClientService;
 @Controller
 public class ClientController {
 
+	private final static Logger logger = Logger.getLogger(ClientController.class);
+	
 	@Autowired
 	private ClientService clienteService;
 	
 	@RequestMapping(value="/agregarCliente", method = RequestMethod.POST)
 	public void addCliente(@ModelAttribute("clientes") List<Cliente> clientes) {
 		for(Cliente cliente : clientes) {
-			System.out.println(cliente.getNombre());
+			logger.info("Cliente "+cliente.getNombre());;
 		}
 	}
 }
