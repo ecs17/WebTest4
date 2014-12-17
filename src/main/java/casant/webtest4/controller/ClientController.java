@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +20,12 @@ public class ClientController {
 	
 	@Autowired
 	private ClientService clienteService;
+	
+	@RequestMapping(value="/clientesForm", method =  RequestMethod.GET)
+	public String displayClientesForm(Model model){
+		logger.info("Displaying Cliente form");
+		return "clienteForm";
+	}
 	
 	@RequestMapping(value="/agregarCliente", method = RequestMethod.POST)
 	public void addCliente(@ModelAttribute("clientes") List<Cliente> clientes) {

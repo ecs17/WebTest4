@@ -34,7 +34,7 @@
                                         <a href="productosForm.htm">Productos</a>
                                     </li>
                                     <li>
-                                        <a href="clientesForm.html">Clientes</a>
+                                        <a href="clientesForm.htm">Clientes</a>
                                     </li>
                                 </ul>
                             </li>

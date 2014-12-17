@@ -10,7 +10,7 @@
         INSERT INTO
             cliente (id, nombre, tipo, direccion, estado_cliente, telefono, rfc, correo_electronico)
         VALUES
-            (#{id}, #{nombre}, #{tipo}, #{direccion}, #{estado_cliente}, #{telefono}, #{rfc}, #{correo_electronico})
+            (#{id}, #{nombre}, #{tipo.descripcion}, #{direccion}, #{estado_cliente}, #{telefono}, #{rfc}, #{correo_electronico})
     </insert>
 
 </mapper>
