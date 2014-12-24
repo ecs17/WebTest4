@@ -24,6 +24,7 @@ public class ClientController {
 	@RequestMapping(value="/clientesForm", method =  RequestMethod.GET)
 	public String displayClientesForm(Model model){
 		logger.info("Displaying Cliente form");
+		model.addAttribute("name", "World");
 		return "clienteForm";
 	}
 	
