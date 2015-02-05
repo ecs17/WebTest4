@@ -43,7 +43,7 @@ public class LoginFormController {
     }
     
     @RequestMapping(value="loginForm", method = RequestMethod.POST)
-    public ModelAndView procesLogin(@ModelAttribute("loginDetails")User user, BindingResult result, Map model,
+    public ModelAndView procesLogin(@ModelAttribute User user, BindingResult result, Map model,
                                     @RequestParam(value = "error", required = false) String error) {
         ValidationUtils.rejectIfEmptyOrWhitespace(result,"userName","userName", "El campo Usuario no puede estar vacio");
         ValidationUtils.rejectIfEmptyOrWhitespace(result,"password","password", "El campo password no debe estar vacio");
