@@ -1,73 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title th:text="#{page.title}">Store</title>
-<<<<<<< HEAD
-        <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/static/css/bootstrap.min.css}"/>
-        <link href="../static/css/plugins/metisMenu/metisMenu.min.css" th:href="@{/static/css/plugins/metisMenu/metisMenu.min.css}" rel="stylesheet"/>
-        <link href="../static/css/bootstrap.min.css" th:href="@{/static/css/bootstrap.min.css}"></link>
-        <link href="../static/font-awesome-4.1.0/css/font-awesome.min.css" th:href="@{/static/font-awesome-4.1.0/css/font-awesome.min.css}"></link>
-=======
-        <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css" th:href="@{/static/css/bootstrap.min.css}"/>
-        <link href="../../static/css/plugins/metisMenu/metisMenu.min.css" th:href="@{/static/css/plugins/metisMenu/metisMenu.min.css}" rel="stylesheet"/>
-        <link href="../../static/css/bootstrap.min.css" th:href="@{/static/css/bootstrap.min.css}"></link>
-        <link href="../../static/font-awesome-4.1.0/css/font-awesome.min.css" th:href="@{/static/font-awesome-4.1.0/css/font-awesome.min.css}"></link>
-        
-        <script type="text/javascript" src="../../static/js/jquery-1.11.0.js" th:src="@{/static/js/jquery-1.11.0.js}"></script>
-        <script type="text/javascript" src="../../static/js/login.js" th:src="@{/static/js/login.js}"></script>
->>>>>>> fa5895476ebb1079fc3686cacf7fa250487361e7
-     </head>
-    <body>
-        <div class="panel panel-default">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <div class="login-panel panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Inicio Sesion</h3>
-                        </div>
-                        <div class="panel-body">
-                            <fieldset>
-<<<<<<< HEAD
-                                <form name="loginForm" action="loginForm.htm" method="post">
-=======
-                                <div id="loginForm">
->>>>>>> fa5895476ebb1079fc3686cacf7fa250487361e7
-                                    <div class="form-group">
-                                        <label class="control-label" th:text="#{label.user.name}">User Name</label>
-                                    </div>
-                                    <div class="form-group">
-<<<<<<< HEAD
-                                        <input name="userName" class="form-control"/>
-=======
-                                        <input id="userName" name="user" class="form-control"></input>
-                                    </div>
-                                    <div class="form-group">
-                                        <font color="red"><form:errors path="userName"></form:errors></font>
->>>>>>> fa5895476ebb1079fc3686cacf7fa250487361e7
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label" th:text="#{label.user.password}">Password</label>
-                                    </div>
-                                    <div class="form-group">
-<<<<<<< HEAD
-                                        <input name="password" type="password" class="form-control"/>
-                                    </div>
-                                    <input type="submit" value="Login" class="btn btn-lg btn-success"/>
-                                </form>
-=======
-                                        <input id="password" name="password" type="password" class="form-control"></input>
-                                    </div>
-                                    <div class="form-group">
-                                        <font color="red"><form:errors path="password"></form:errors></font>
-                                    </div>
-                                    <button id="login" type="button" class="btn btn-lg btn-success">Login</button>
-                                </div>
->>>>>>> fa5895476ebb1079fc3686cacf7fa250487361e7
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+<head>
+<title th:text="#{page.title}">Store</title>
+
+<link rel="stylesheet" href="../static/css/bootstrap.min.css"
+	th:href="@{/static/css/bootstrap.min.css}" />
+<link rel="stylesheet"
+	href="../static/css/plugins/metisMenu/metisMenu.min.css"
+	th:href="@{/static/css/plugins/metisMenu/metisMenu.min.css}" />
+<link rel="stylesheet" href="../static/css/bootstrap.min.css"
+	th:href="@{/static/css/bootstrap.min.css}"></link>
+<link rel="stylesheet"
+	href="../static/font-awesome-4.1.0/css/font-awesome.min.css"
+	th:href="@{/static/font-awesome-4.1.0/css/font-awesome.min.css}"></link>
+
+</head>
+<body>
+	<div class="panel panel-default">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="login-panel panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Inicio Sesion</h3>
+					</div>
+					<div class="panel-body">
+						<fieldset>
+							<form name="loginForm" action="loginForm.htm" method="post">
+								<div id="loginForm">
+									<div class="form-group">
+										<label class="control-label" th:text="#{label.user.name}">User
+											Name</label>
+									</div>
+									<div class="form-group">
+										<input name="userName" class="form-control" />
+									</div>
+									<div class="form-group">
+										<label class="control-label" th:text="#{label.user.password}">Password</label>
+									</div>
+									<div class="form-group">
+										<input name="password" type="password" class="form-control" />
+									</div>
+									<button id="login" type="submit" class="btn btn-lg btn-success">Login</button>
+								</div>
+							</form>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
